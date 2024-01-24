@@ -1,1 +1,9 @@
-console.log('Hello word')
+let items = [
+    { price: 50},
+    { price: -45},
+    { price: '45'},
+    { price: 57},
+]
+
+
+
