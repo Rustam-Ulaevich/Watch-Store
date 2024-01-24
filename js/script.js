@@ -5,5 +5,9 @@ let items = [
     { price: 57},
 ]
 
+const calculateTotal = (goods) => {
+    
+}
+
 
 
