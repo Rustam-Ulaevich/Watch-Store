@@ -1,4 +1,4 @@
-let items = [
+ let items = [
     { price: 50},
     { price: -45},
     { price: '45'},
@@ -22,6 +22,27 @@ const withMap = (arr) => {
 
 console.log(calculateTotal(items));
 console.log(withMap(items));
+
+const logger = (kind) => {
+    const colors = {
+        warning: '\x1b[1;33m',
+        error: '\x1b[0;39m',
+        info: '\x1b[1;37m'
+    };
+    const color = colors[kind] || colors.info
+    return (s) => {
+        const date = new Date().toISOString();
+        console.log(color + date + '\t' + s)
+    }
+}
+
+const warning = logger('warning')
+const error = logger('error')
+const info = logger('info')
+
+ warning('Осторожно, последнее предупреждение')
+ error('Пипец!!!')
+ info('Не ссы, всё ок!')
 
 
 
